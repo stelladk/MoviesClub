@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <div class="topnav">
+        <div class="search-line">
+            <picture>
+                <source media="(min-width: 1050px)" srcset="book.png">
+                <img id="logo" src="book.png" alt="site-logo" width="40px">
+            </picture>
+            <input type="text" class="search-form" oninput="search(this.value)">
+            <span class="input-text"><i class="fa fa-search"></i></span>
+        </div>
+        <div class="account-menu">
+            <ul>
+                <li><a href="bookmarks.html"><i class="fa fa-bookmark-o"></i> BookMarks</a></li>
+                <li><a href="#">Sign Up</a></li>
+                <li><a href="#">Log In</a></li>
+                <li><a href="profile.html"><i class="fa fa-user-circle-o"></i> Profile</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <section class="grid-container">
+        <div class="menu"></div>
+        <main>
+            <div class="movie-item">
+                <div class="poster">
+                    <a href="info.html">
+                        <picture>
+                            <!-- <source media="(min-width: 1050px)" srcset="catbag.jpg"> -->
+                            <img src="catbag.jpg" alt="poster" width="200">
+                        </picture>
+                    </a>
+                    <div class="overlay-down">
+                        <button onclick="bookm()" type="button" class="btnbkmrk" title="Αγορά">
+                            <i class="fa fa-bookmark-o"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="description">
+                    <span class="title"><strong>Title of the Film </strong></span><span class="year">2069</span>
+                    <div class="actors">Egw, tompeip</div>
+                    <div class="splot">text text text text <br> text text text text</div>
+                    <div class="gerne">porn,sexy</div>
+                    <div class="rating">polla asteria gt eimai cool</div>
+                </div>
+                <!-- <button class="bmrkbtn"></button> -->
+            </div>
+            <div class="movie-item">
+                <div class="poster">
+                    <a href="#">
+                        <picture>
+                            <!-- <source media="(min-width: 1050px)" srcset="catbag.jpg"> -->
+                            <img src="catbag.jpg" alt="poster">
+                        </picture>
+                    </a>
+                </div>
+                <div class="description">
+                    <span class="title"><strong>Title of the Film </strong></span><span class="year">2069</span>
+                    <div class="actors">Egw, tompeip</div>
+                    <div class="splot">text text text text <br> text text text text</div>
+                    <div class="gerne">porn,sexy</div>
+                    <div class="rating">polla asteria gt eimai cool</div>
+                </div>
+                <!-- <button class="bmrkbtn"></button> -->
+            </div>
+            <div class="movie-item">
+                <div class="poster">
+                    <a href="#">
+                        <picture>
+                            <!-- <source media="(min-width: 1050px)" srcset="catbag.jpg"> -->
+                            <img src="catbag.jpg" alt="poster" width="200">
+                        </picture>
+                    </a>
+                </div>
+
+                <div class="description">
+                    <span class="title"><strong>Title of the Film </strong></span><span class="year">2069</span>
+                    <div class="actors">Egw, tompeip</div>
+                    <div class="splot">text text text text <br> text text text text</div>
+                    <div class="gerne">porn,sexy</div>
+                    <div class="rating">polla asteria gt eimai cool</div>
+                </div>
+            </div>
+        </main>
+        <div class="rand"></div>
+        <footer>
+
+        </footer>
+    </section>
+    <script src="brain.js"></script>
+</body>
+
+</html>
