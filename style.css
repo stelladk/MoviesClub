@@ -168,12 +168,14 @@ main {
     z-index: -1;
     width: 250px;
     height: 350px;
+    border: rgb(0,0,0,0.5);
     background-color: #fff;
     transition: 0.75s ease;
 }
 
 .movie-item:hover .description{
     margin-left: 250px;
+    box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.5);
 }
 
 .description .title{
