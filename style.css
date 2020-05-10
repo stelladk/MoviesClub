@@ -114,7 +114,7 @@ main {
 
 .movie-item {
     display: block;
-    margin: 2%;
+    /* margin: 2%; */
     overflow: hidden;
     width: 400px;
 }
@@ -125,7 +125,7 @@ main {
 
 .poster img {
     width: 250px;
-    height: 350px; 
+    height: 350px;
     /* analogia 1.4 */
 }
 
@@ -135,7 +135,8 @@ main {
     position: absolute;
     top: 10%;
     margin-left: 1%;
-    width: 70%;
+    width: 250px;
+    /* height: 40px; */
 }
 
 .overlay-down .fa {
@@ -172,12 +173,12 @@ main {
     transition: 0.75s ease;
 }
 
-.movie-item:hover .description{
+.movie-item:hover .description {
     margin-left: 250px;
     box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.5);
 }
 
-.description .title{
+.description .title {
     font-weight: bold;
 }
 

@@ -2,14 +2,12 @@ function search(value) {
 
 }
 
-function bookm() {
+function bookm(element) {
     // alert("booya");
-    var f = 0;
-    if (f == 0) {
-        document.getElementsByClassName("fa fa-bookmark-o")[1].className = "fa fa-bookmark";
-        f = 1;
+    if (element.children[0].className == "fa fa-bookmark-o") {
+        element.children[0].className = "fa fa-bookmark";
     } else {
-        document.getElementsByClassName("fa fa-bookmark")[1].className = "fa fa-bookmark-o";
+        element.children[0].className = "fa fa-bookmark-o";
         f = 0;
     }
 }
