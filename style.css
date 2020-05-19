@@ -139,23 +139,19 @@ main {
     grid-area: 'main';
     background-color: rgb(123, 255, 0);
     width: 96%;
-    /* display: flex;
+    display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    align-items: center; */
+    align-items: center;
     height: 100%;
-}
-
-main .row {
-    display: flex;
 }
 
 .movie-item {
     display: block;
-    margin: 2%;
+    margin: 1%;
     overflow: hidden;
-    width: 100%;
-    height: 100%;
+    width: 440px;
+    /* height: 100%; */
 }
 
 .poster {
@@ -164,8 +160,8 @@ main .row {
 }
 
 .poster img {
-    width: 250px;
-    height: 350px;
+    width: 220px;
+    height: 308px;
     /* analogia 1.4 */
 }
 
@@ -207,14 +203,14 @@ main .row {
     position: absolute;
     float: right;
     z-index: -1;
-    width: 250px;
-    height: 350px;
+    width: 220px;
+    height: 308px;
     background-color: #fff;
     transition: 0.75s ease;
 }
 
 .movie-item:hover .description {
-    margin-left: 250px;
+    margin-left: 220px;
     box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.5);
 }
 
