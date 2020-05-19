@@ -6,13 +6,18 @@
 
 body {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: gainsboro;
+}
+
+body::-webkit-scrollbar {
+    display: none;
 }
 
 .topnav {
     height: 57px;
     top: 0;
     position: sticky;
-    background: #fff;
+    background: gainsboro;
     margin-bottom: 20px;
     border-bottom: 3px solid indigo;
     z-index: 2;
@@ -95,8 +100,8 @@ body {
 
 .menu {
     grid-area: 'menu';
-    /* background-color: aqua;
-    width: 100%;
+    background-color: darkgrey;
+    /* width: 100%;
     height: 500px; */
 }
 
@@ -137,13 +142,13 @@ body {
 main {
     padding: 2%;
     grid-area: 'main';
-    background-color: rgb(123, 255, 0);
+    /* background-color: rgb(123, 255, 0); */
     width: 96%;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
-    height: 100%;
+    /* height: 100%; */
 }
 
 .movie-item {
@@ -220,17 +225,28 @@ main {
 
 .rand {
     grid-area: 'rand';
-    background-color: rgb(255, 0, 43);
+    background-color: darkgrey;
     width: 100%;
-    /* height: 500px; */
+    /* padding-left: 10px; */
+}
+
+.rand h3 {
+    text-align: center;
+    padding-bottom: 30px;
+}
+
+.rand ol {
+    padding-left: 25px;
+}
+
+.rand ol li {
+    margin-bottom: 5px;
 }
 
 footer {
     grid-area: 'footer';
-    background-color: midnightblue;
-    width: 98.9vw;
-    height: 110%;
-    margin-top: 50px;
+    background-color: indigo;
+    width: 100vw;
     color: #fff;
 }
 
@@ -290,7 +306,7 @@ footer hr {
 
 input[type="reset"] {
     font-family: FontAwesome;
-    background-color: indigo;
+    background-color: darkgrey;
     padding: 2px 5px;
     font-size: 20px;
     border: none !important;
@@ -303,4 +319,19 @@ footer .row a:any-link {
 
 footer .row a:hover {
     color: indigo;
+}
+
+
+/* ------------info.html-------------- */
+
+#poster {
+    float: left;
+}
+
+.movie p {
+    font-weight: bold;
+}
+
+.movie p span {
+    font-weight: normal;
 }

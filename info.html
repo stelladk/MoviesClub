@@ -5,10 +5,58 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dynamic shit</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body>
 
+    <div class="topnav">
+        <div class="search-line">
+            <picture>
+                <source media="(min-width: 1050px)" srcset="book.png">
+                <img id="logo" src="book.png" alt="site-logo" width="40px">
+            </picture>
+            <input type="text" class="search-form" oninput="search(this.value)">
+            <span class="input-text"><i class="fa fa-search"></i></span>
+        </div>
+        <div class="account-menu">
+            <ul>
+                <li><a href="#">Sign Up</a></li>
+                <li><a href="#">Log In</a></li>
+                <li><a href="bookmarks.html"><i class="fa fa-bookmark-o"></i> BookMarks</a></li>
+                <li><a href="profile.html"><i class="fa fa-user-circle-o"></i> Profile</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="movie">
+        <img id="poster" src="movie.png" alt="movie" width="500px">
+        <span class="details">
+            <h1 id="title">Guardians Of The Galaxy Vol.III</h1>
+            <p>Year: <span id="year">2023</span></p>
+        <p>Rated: <span id="rated">PG-13</span></p>
+        <p>Released: <span id="released">01/08/2023</span></p>
+        <p>Runtime: <span id="runtime">121'</span></p>
+        <p>Genre: <span id="genre">Action, Adventure, Comedy, Sci-Fi</span></p>
+        <p>Director: <span id="director">James Gunn</span></p>
+        <p>Writers: <span id="writer">James Gunn, Nicole Perlman, Dan Abnett (based on the Marvel comics by), Andy Lanning (based on the Marvel comics by), Bill Mantlo (character created by: Rocket Raccoon), Keith Giffen (character created by: Rocket Raccoon), Jim Starlin (characters
+                created by: Drax the Destroyer, Gamora & Thanos), Steve Englehart (character created by: Star-Lord), Steve Gan (character created by: Star-Lord), Steve Gerber (character created by: Howard the Duck), Val Mayerik (character created by:
+                Howard the Duck)</span></p>
+        <p>Actors: <span id="actors">Chris Pratt, Zoe Saldana, Dave Bautista, Vin Diesel, Brandley Cooper</span></p>
+        <p>Plot: <span id="plot">After stealing a mysterious orb in the far reaches of outer space, Peter Quill from Earth, is now the main target of a manhunt led by the villain known as Ronan the Accuser. To help fight Ronan and his team and save the galaxy from his power,
+                Quill creates a team of space heroes known as the "Guardians of the Galaxy" to save the world.</span></p>
+        <p>Language: <span id="language">English</span></p>
+        <p>Country: <span id="country">USA</span></p>
+        <p>Awards: <span id="awards">Nominated for 2 Oscars. Another 52 wins & 100 nominations.</span></p>
+        <p>Rating: <span id="rating">imdbRating":"8.0","imdbVotes":"1,007,917</span></p>
+        <!-- tha ginei fasoula edw-->
+        <p>Type: <span id="type">movie</span></p>
+        <p>DVD: <span id="dvd">N/A</span></p>
+        <p>Box Office: <span id="boxoffice">N/A</span></p>
+        <p>Production: <span id="production">N/A</span></span>
+        </p>
+        </span>
+    </div>
 </body>
 
 </html>
