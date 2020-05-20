@@ -13,6 +13,9 @@ body::-webkit-scrollbar {
     display: none;
 }
 
+
+/* ---------index.html----------- */
+
 .topnav {
     height: 57px;
     top: 0;
