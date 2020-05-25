@@ -142,7 +142,7 @@ body::-webkit-scrollbar {
     float: right;
 }
 
-main {
+.movies-container {
     padding: 2%;
     grid-area: 'main';
     /* background-color: rgb(123, 255, 0); */
@@ -156,7 +156,7 @@ main {
 
 .movie-item {
     display: block;
-    margin: 1%;
+    /* margin: 1%; */
     overflow: hidden;
     width: 440px;
     /* height: 100%; */
@@ -337,4 +337,57 @@ footer .row a:hover {
 
 .movie p span {
     font-weight: normal;
+}
+
+
+/* ----------bookmarks.htmls---------- */
+
+.movie-preview{
+    position: relative;
+    box-sizing: content-box;
+    margin: 10px;
+    width: 220px;
+    height: 308px;
+    overflow: hidden;
+    color: #fff;
+    background-color: transparent;
+    margin: 20px;
+}
+.movie-preview img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: scale(1.0);
+    transition: transform 0.4s ease;
+}
+
+.opacity-box{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0);
+    transition:  background-color 0.3s ease;
+    z-index: 1;
+}
+.opacity-box p{
+    position: absolute;
+    bottom: 5px;
+    left: 20px;
+    font-size: 20px;
+    font-weight: bold;
+    opacity: 0;
+    transition:  transform 0.3s ease, opacity 0.3s ease;
+}
+
+.movie-preview:hover img{
+    transform: scale(1.1);
+}
+.movie-preview:hover .opacity-box{
+    background-color: rgba(75, 0, 130, 0.5);
+}
+.movie-preview:hover p{
+    transform: translateY(-20px);
+    opacity: 1;
 }
