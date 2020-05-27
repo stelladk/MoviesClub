@@ -14,6 +14,8 @@ body::-webkit-scrollbar {
 }
 
 
+
+
 /* ---------index.html----------- */
 
 .topnav {
@@ -90,6 +92,7 @@ body::-webkit-scrollbar {
 .account-menu ul li a {
     font-size: 15px;
     font-weight: bold;
+    white-space: nowrap;
     color: #fff;
     text-decoration: none;
 }
@@ -156,20 +159,22 @@ body::-webkit-scrollbar {
 
 .movie-item {
     display: block;
-    /* margin: 1%; */
+    margin: 1%;
     overflow: hidden;
-    width: 440px;
+    width: 400px;
     /* height: 100%; */
 }
 
 .poster {
     float: left;
     position: relative;
+    width: 200px;
+    height: 280px;
 }
 
 .poster img {
-    width: 220px;
-    height: 308px;
+    width: 200px;
+    height: 280px;
     /* analogia 1.4 */
 }
 
@@ -181,6 +186,7 @@ body::-webkit-scrollbar {
     margin-left: 5%;
     width: 75%;
     /* height: 40px; */
+    z-index: 20;
 }
 
 .overlay-down .fa {
@@ -211,14 +217,14 @@ body::-webkit-scrollbar {
     position: absolute;
     float: right;
     z-index: -1;
-    width: 220px;
-    height: 308px;
+    width: 200px;
+    height: 280px;
     background-color: #fff;
     transition: 0.75s ease;
 }
 
 .movie-item:hover .description {
-    margin-left: 220px;
+    margin-left: 200px;
     box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.5);
 }
 
@@ -346,8 +352,8 @@ footer .row a:hover {
     position: relative;
     box-sizing: content-box;
     margin: 10px;
-    width: 220px;
-    height: 308px;
+    width: 200px;
+    height: 280px;
     overflow: hidden;
     color: #fff;
     background-color: transparent;
@@ -374,7 +380,7 @@ footer .row a:hover {
 .opacity-box p{
     position: absolute;
     bottom: 5px;
-    left: 20px;
+    left: 10px;
     font-size: 20px;
     font-weight: bold;
     opacity: 0;
@@ -390,4 +396,10 @@ footer .row a:hover {
 .movie-preview:hover p{
     transform: translateY(-20px);
     opacity: 1;
+}
+
+.movie-preview:hover .overlay-down {
+    opacity: 1;
+    margin-top: 4.5%;
+    transition: 0.5s;
 }

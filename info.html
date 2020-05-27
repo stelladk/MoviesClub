@@ -22,10 +22,10 @@
         </div>
         <div class="account-menu">
             <ul>
-                <li><a href="#">Sign Up</a></li>
-                <li><a href="#">Log In</a></li>
-                <li><a href="bookmarks.html"><i class="fa fa-bookmark-o"></i> BookMarks</a></li>
-                <li><a href="profile.html"><i class="fa fa-user-circle-o"></i> Profile</a></li>
+                <li id="signup_btn"><a href="#">Sign Up</a></li>
+                <li id="login_btn" onclick="login()"><a href="#">Log In</a></li>
+                <li id="bookm_btn"><a href="bookmarks.html"><i class="fa fa-bookmark-o"></i> BookMarks</a></li>
+                <li id="profile_btn" onclick="signout()"><a href="#"><i class="fa fa-user-circle-o"></i> Profile</a></li>
             </ul>
         </div>
     </div>
@@ -57,6 +57,7 @@
         </p>
         </span>
     </div>
+    <script src="brain.js"></script>
 </body>
 
 </html>
