@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Bookmarks</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <div class="topnav">
+        <div class="search-line">
+            <picture>
+                <source media="(min-width: 1050px)" srcset="book.png">
+                <img id="logo" src="book.png" alt="site-logo" width="40px">
+            </picture>
+            <input type="text" class="search-form" oninput="search(this.value)">
+            <span class="input-text"><a href="index.html"><i class="fa fa-search"></i></a></span>
+        </div>
+        <div class="account-menu">
+            <ul>
+                <li id="signup_btn"><a href="#">Sign Up</a></li>
+                <li id="login_btn" onclick="login()"><a href="#">Log In</a></li>
+                <li id="bookm_btn"><a href="bookmarks.html"><i class="fa fa-bookmark-o"></i> BookMarks</a></li>
+                <li id="profile_btn" onclick="signout()"><a href="#"><i class="fa fa-user-circle-o"></i> Profile</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <section>
+        <main>
+            <h1>My Bookmarks</h1>
+            <div class="movies-container">
+                <div class="movie-preview">
+                    <div class="poster">
+                        <a href="info">
+                            <picture>
+                                <!-- <source media="(min-width: 1050px)" srcset="catbag.jpg"> -->
+                                <img src="movie.png" alt="poster" width="200">
+                            </picture>
+                            <div class="opacity-box">
+                                <p class="title">Title of the Film</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="overlay-down">
+                        <button onclick="bookm(this)" type="button" class="btnbkmrk" title="Αγορά">
+                                <i class="fa fa-bookmark-o"></i>
+                            </button>
+                    </div>
+                </div>
+
+                <footer>
+                    <div class="row">
+                        <div class="foot-col">
+                            <h1>Useful Info</h1>
+                            <p>Upcoming Discounts</p>
+                            <p>Return Policy</p>
+                            <p><a href="javascript:priv()">Privacy Policy</a></p>
+                            <p>Terms of Use</p>
+                        </div>
+                        <div class="foot-col">
+                            <h1>About Us</h1>
+                            <p>
+                                We are a small company that loves<br> to see animals happy and well-treated.<br> Our products are 100% original<br> and safe for your pet.<br><br> Thank you for selecting us!
+                            </p>
+                        </div>
+                        <div class="foot-col">
+                            <h1>Find Us on:</h1>
+                            <div class="media">
+                                <ul>
+                                    <li>
+                                        <a href="https://www.aueb.gr/" target="_blank">
+                                            <img src="https://upload.wikimedia.org/wikipedia/el/9/94/Athens_University_of_Economics_and_Business_%28logo%29.png" alt="AUEB Logo" class="aueb"></a>
+                                    </li>
+                                    <li>
+                                        <a href="https://eclass.aueb.gr/" target="_blank">
+                                            <img src="eclass.png" alt="Eclass Logo" class="eclass"></a>
+                                    </li>
+                                    <li>
+                                        <a href="https://www.facebook.com/auebgreece" target="_blank">
+                                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Facebook_f_logo_%282019%29.svg/120px-Facebook_f_logo_%282019%29.svg.png" alt="Facebook Logo" class="fb"></a>
+                                    </li>
+                                    <li>
+                                        <a href="https://www.instagram.com/aueb.gr/?hl=el" target="_blank">
+                                            <img src="https://lh3.googleusercontent.com/2sREY-8UpjmaLDCTztldQf6u2RGUtuyf6VT5iyX3z53JS4TdvfQlX-rNChXKgpBYMw" alt="Instagram Logo" class="insta"></a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <h1>Subscribe to our Newsletter:</h1>
+                            <form action="">
+                                <input type="email" placeholder="Email address" name="mail" size="30px">
+                                <input type="reset" value="&#xf1d8;">
+                                <!--just to erase the email-->
+                            </form>
+                        </div>
+                    </div>
+                    <hr>
+                    <p class="copyright">©2020 AniMall®</p>
+                </footer>
+    </section>
+    <script src="brain.js"></script>
+</body>
+
+</html>
