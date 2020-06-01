@@ -2,9 +2,11 @@ package com.springboot.moviesapp;
 
 import javax.persistence.EmbeddedId;
 import javax.persistence.Entity;
+import javax.persistence.Table;
 
 
 @Entity
+@Table(name = "bookmark")
 public class Bookmark {
 	@EmbeddedId
 	private BookmarkIdentity bookmarkId;

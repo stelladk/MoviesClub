@@ -1,5 +1,6 @@
 package com.springboot.moviesapp;
 
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
@@ -19,7 +20,9 @@ public class MoviesController {
 	private BookmarkService bookmarkService;
 
 	@RequestMapping("/")
-	public String viewHomePage() {
+	public String viewHomePage(Model model) {
+		User user = new User();
+		model.addAttribute("user", user);
 		return "index";
 	}
 	
@@ -34,5 +37,11 @@ public class MoviesController {
 	@RequestMapping("/info")
 	public String showMovieInfo() {
 		return "info";
+	}
+	
+	@RequestMapping(value = "/signup", method = RequestMethod.POST)
+	public String signup(@ModelAttribute("user") User user) {
+		userService.save(user);
+		return "redirect:/";
 	}
 }
