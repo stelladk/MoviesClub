@@ -32,7 +32,7 @@
     <div class="sign_window">
         <div id="box">
         </div>
-        <form id="window_form" action="#" th:action="@{/signup}" th:object="${user}" method="POST">Email:<br>
+        <form id="window_form" action="#" th:action="@{/signup}" th:object="${account}" method="POST">Email:<br>
             <input type="text" name="email" id="email_form" th:field="*{email}" />
             <br/>Password:<br>
             <input type="password" name="password" id="password_form" th:field="*{password}" /><br>

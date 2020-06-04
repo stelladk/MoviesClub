@@ -15,33 +15,33 @@ import org.springframework.ui.Model;
 @Controller
 public class MoviesController {
 	@Autowired
-	private UserService userService;
+	private AccountService accountService;
 	@Autowired
 	private BookmarkService bookmarkService;
 
-	@RequestMapping("/")
+	@RequestMapping(value = "/", method = RequestMethod.GET)
 	public String viewHomePage(Model model) {
-		User user = new User();
-		model.addAttribute("user", user);
+		Account account = new Account();
+		model.addAttribute("account", account);
 		return "index";
 	}
 	
 	@RequestMapping(value = "/bookmarks", method = RequestMethod.GET)
 	public String showBookmarks(Model model, HttpServletRequest request) {
-//		String email = (String)request.getSession().getAttribute("email");
+		String email = (String)request.getSession().getAttribute("email");
 //		List<Bookmark> bookmarks = bookmarkService.selectByEmail(email);
 		
 		return "bookmarks";
 	}
 	
-	@RequestMapping("/info")
+	@RequestMapping(value = "/info", method = RequestMethod.GET)
 	public String showMovieInfo() {
 		return "info";
 	}
 	
 	@RequestMapping(value = "/signup", method = RequestMethod.POST)
-	public String signup(@ModelAttribute("user") User user) {
-		userService.save(user);
+	public String signup(@ModelAttribute("account") Account account) {
+		accountService.save(account);
 		return "redirect:/";
 	}
 }
