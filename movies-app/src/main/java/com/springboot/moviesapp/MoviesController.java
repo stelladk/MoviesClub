@@ -25,8 +25,8 @@ public class MoviesController {
 	}
 	
 	@GetMapping(value = "/bookmarks")
-	public String showBookmarks(Model model, HttpServletRequest request) {
-		String email = (String)request.getSession().getAttribute("email");
+	public String showBookmarks(Model model) {
+//		String email = (String)request.getSession().getAttribute("email");
 //		List<Bookmark> bookmarks = bookmarkService.selectByEmail(email);
 		
 		return "bookmarks";

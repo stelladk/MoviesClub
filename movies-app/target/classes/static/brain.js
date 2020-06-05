@@ -117,7 +117,10 @@ function bookm(element) {
         } else {
             var success = deleteBookmark(email, imdbID);
             if(success) element.children[0].className = "fa fa-bookmark-o"; //delete
-//            f = 0;
+			if(window.location.href == "http://localhost:8181/bookmarks"){
+				console.log("im in");
+				window.location.reload();
+			}
         }
 
     }
@@ -193,8 +196,9 @@ function deleteBookmark(email, imdbID){
 		url: '/deleteb',
 		type: 'POST',
 		contentType: "application/json",
-		data: JSON.stringify(account),
+		data: JSON.stringify(bookmark),
 		dataType: 'json',
+		async: false,
 		cache: false,
 		timeout: 600000,
         success: function(data) {

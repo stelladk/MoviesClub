@@ -32,12 +32,11 @@
     <section>
         <main>
             <h1>My Bookmarks</h1>
-            <div class="movies-container">
+            <div class="movies-container" id="moviesc">
                 <div class="movie-preview">
                     <div class="poster">
                         <a href="info">
                             <picture>
-                                <!-- <source media="(min-width: 1050px)" srcset="catbag.jpg"> -->
                                 <img src="movie.png" alt="poster" width="200">
                             </picture>
                             <div class="opacity-box">
@@ -46,7 +45,7 @@
                         </a>
                     </div>
                     <div class="overlay-down">
-                        <button onclick="bookm(this)" type="button" class="btnbkmrk" title="Αγορά">
+                        <button onclick="bookm(this)" type="button" class="btnbkmrk" title="bookm">
                                 <i class="fa fa-bookmark-o"></i>
                             </button>
                     </div>
@@ -103,7 +102,10 @@
                 <p class="copyright">©2020 AniMall®</p>
             </footer>
     </section>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
     <script src="brain.js"></script>
+    <script src="bookmark.js"></script>
 </body>
 
 </html>

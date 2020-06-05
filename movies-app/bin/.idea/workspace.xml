@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="58b947c8-b996-4d00-b63d-ac158cbcd366" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/springboot/moviesapp/Bookmark.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/springboot/moviesapp/Bookmark.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/springboot/moviesapp/BookmarkIdentity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/springboot/moviesapp/BookmarkIdentity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/springboot/moviesapp/BookmarkService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/springboot/moviesapp/BookmarkService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/springboot/moviesapp/ResponseController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/springboot/moviesapp/ResponseController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/brain.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/brain.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/springboot/moviesapp/Bookmark.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/springboot/moviesapp/Bookmark.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/springboot/moviesapp/BookmarkIdentity.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/springboot/moviesapp/BookmarkIdentity.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/springboot/moviesapp/BookmarkService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/springboot/moviesapp/BookmarkService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/springboot/moviesapp/ResponseController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/springboot/moviesapp/ResponseController.class" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="FxmlFile" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectId" id="1cqhPsU3RRNfDIj2mrDg2DMZ20K" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+  </component>
+  <component name="RunManager">
+    <configuration name="MoviesAppApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.springboot.moviesapp.MoviesAppApplication" />
+      <module name="movies-app" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.springboot.moviesapp.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.MoviesAppApplication" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="58b947c8-b996-4d00-b63d-ac158cbcd366" name="Default Changelist" comment="" />
+      <created>1591262009754</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1591262009754</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="287" y="28" key="#com.intellij.ide.fileTemplates.ui.ConfigureTemplatesDialog" timestamp="1591266366672">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="287" y="28" key="#com.intellij.ide.fileTemplates.ui.ConfigureTemplatesDialog/0.0.1280.680@0.0.1280.680" timestamp="1591266366672" />
+    <state x="446" y="25" key="#com.intellij.ide.util.MemberChooser" timestamp="1591354902751">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="446" y="25" key="#com.intellij.ide.util.MemberChooser/0.0.1280.680@0.0.1280.680" timestamp="1591354902751" />
+    <state x="374" y="30" key="#com.intellij.ide.util.frameworkSupport.AddFrameworkSupportDialog" timestamp="1591265723180">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="374" y="30" key="#com.intellij.ide.util.frameworkSupport.AddFrameworkSupportDialog/0.0.1280.680@0.0.1280.680" timestamp="1591265723180" />
+    <state x="421" y="50" key="FileChooserDialogImpl" timestamp="1591343831246">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="421" y="50" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1591343831246" />
+    <state width="1237" height="72" key="GridCell.Tab.0.bottom" timestamp="1591359543349">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="1237" height="72" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1591359543349" />
+    <state width="1237" height="72" key="GridCell.Tab.0.center" timestamp="1591359543349">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="1237" height="72" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1591359543349" />
+    <state width="1237" height="72" key="GridCell.Tab.0.left" timestamp="1591359543348">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="1237" height="72" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1591359543348" />
+    <state width="1237" height="72" key="GridCell.Tab.0.right" timestamp="1591359543349">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="1237" height="72" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1591359543349" />
+    <state x="171" y="0" key="Maven.ArtifactSearchDialog" timestamp="1591344755529">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="171" y="0" key="Maven.ArtifactSearchDialog/0.0.1280.680@0.0.1280.680" timestamp="1591344755529" />
+    <state x="121" y="0" key="SettingsEditor" timestamp="1591266144734">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="121" y="0" key="SettingsEditor/0.0.1280.680@0.0.1280.680" timestamp="1591266144734" />
+    <state x="303" y="1" width="672" height="678" key="search.everywhere.popup" timestamp="1591266217051">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="303" y="1" width="672" height="678" key="search.everywhere.popup/0.0.1280.680@0.0.1280.680" timestamp="1591266217051" />
+  </component>
+</project>
