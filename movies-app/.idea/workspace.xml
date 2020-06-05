@@ -21,10 +21,34 @@
   <component name="ChangeListManager">
     <list default="true" id="58b947c8-b996-4d00-b63d-ac158cbcd366" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/springboot/moviesapp/BookmarkService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/springboot/moviesapp/BookmarkService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/springboot/moviesapp/ResponseController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/springboot/moviesapp/ResponseController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/static/brain.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/brain.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/brain.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/brain.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/info.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/info.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/info.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/info.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/springboot/moviesapp/Account.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/springboot/moviesapp/AccountRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/springboot/moviesapp/AccountService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/springboot/moviesapp/AjaxResponse.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/springboot/moviesapp/Bookmark.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/springboot/moviesapp/BookmarkIdentity.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/springboot/moviesapp/BookmarkRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/springboot/moviesapp/BookmarkService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/springboot/moviesapp/MoviesAppApplication.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/springboot/moviesapp/MoviesController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/springboot/moviesapp/ResponseController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/bookmark.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/brain.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/eclass.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/film-reel.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/info.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/logo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/movie.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/bookmarks.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/info.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/springboot/moviesapp/MoviesAppApplicationTests.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -129,22 +153,22 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="421" y="50" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1591343831246" />
-    <state width="1237" height="66" key="GridCell.Tab.0.bottom" timestamp="1591373919189">
+    <state width="1237" height="263" key="GridCell.Tab.0.bottom" timestamp="1591386572621">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="66" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1591373919189" />
-    <state width="1237" height="66" key="GridCell.Tab.0.center" timestamp="1591373919189">
+    <state width="1237" height="263" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1591386572621" />
+    <state width="1237" height="263" key="GridCell.Tab.0.center" timestamp="1591386572621">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="66" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1591373919189" />
-    <state width="1237" height="66" key="GridCell.Tab.0.left" timestamp="1591373919188">
+    <state width="1237" height="263" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1591386572621" />
+    <state width="1237" height="263" key="GridCell.Tab.0.left" timestamp="1591386572621">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="66" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1591373919188" />
-    <state width="1237" height="66" key="GridCell.Tab.0.right" timestamp="1591373919189">
+    <state width="1237" height="263" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1591386572621" />
+    <state width="1237" height="263" key="GridCell.Tab.0.right" timestamp="1591386572621">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="66" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1591373919189" />
+    <state width="1237" height="263" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1591386572621" />
     <state x="171" y="0" key="Maven.ArtifactSearchDialog" timestamp="1591344755529">
       <screen x="0" y="0" width="1280" height="680" />
     </state>

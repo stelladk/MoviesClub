@@ -85,7 +85,6 @@ function login() {
 			var msg = data["message"];
 			if(msg=="success"){
 				sessionStorage.setItem('email', data["account"]["email"]);
-				alert("ok");
 				log_in_out(true);
 			}else{
 				alert("Wrong Data, try again!");

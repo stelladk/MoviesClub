@@ -40,3 +40,7 @@ function getMovieById(imdbId){
         console.log(err)
     });
 }
+
+function redirect(){
+    window.location.href = "/";
+}
