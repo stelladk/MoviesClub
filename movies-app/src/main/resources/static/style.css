@@ -363,6 +363,7 @@ footer .row a:hover {
 
 #poster {
     float: left;
+    width: 300px;
 }
 
 .movie p {
@@ -426,7 +427,7 @@ footer .row a:hover {
     background-color: rgba(75, 0, 130, 0.5);
 }
 
-.movie-preview:hover p {
+.movie-preview:hover .title {
     transform: translateY(-20px);
     opacity: 1;
 }

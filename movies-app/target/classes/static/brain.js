@@ -1,4 +1,9 @@
 checkConn();
+var g = sessionStorage.getItem('word');
+if (g != null) {
+    document.getElementById("sef").value = g;
+    getMovies(g);
+}
 
 function show_signup() {
 
@@ -28,6 +33,12 @@ function close() {
 
 function search(value) {
     getMovies(value);
+    sessionStorage.setItem("word", value);
+}
+
+function backsearch() {
+    var v = document.getElementById("sef").value;
+    sessionStorage.setItem('word', v);
 }
 
 function signout(value) {
@@ -83,6 +94,7 @@ function login() {
 
 function signup() {
     log_in_out(true);
+    //go to main
 }
 
 function bookm(element) {
@@ -98,6 +110,14 @@ function bookm(element) {
             element.children[0].className = "fa fa-bookmark-o";
             f = 0;
         }
+
+        var preview = element.parentElement.parentElement;
+        console.log(preview);
+        var opacity = preview.children[0].children[0].children[1];
+        console.log(opacity);
+        var imdbId = opacity.children[1].innerHTML;
+        console.log(imdbId);
+//        getMovieById(imdbId);
     }
 }
 
@@ -158,13 +178,14 @@ function getMovies(text) {
                 }
                 output += `
                 <div class="movie-preview">
-                    <div class="poster">
+                    <div class="poster" onclick="saveImdbID(this)">
                         <a href="info">
                             <picture>
                                 <img src="${poster}" alt="poster" width="200">
                             </picture>
                             <div class="opacity-box">
                                 <p class="title">${movie.Title} (${movie.Year})</p>
+                                <p class="imdbID">${movie.imdbID}</p>
                             </div>
                         </a>
                     </div>
@@ -182,4 +203,20 @@ function getMovies(text) {
         }).catch((err) => {
             console.log(err)
         });
+}
+
+
+//function getMovieById(imdbId){
+//    axios.get('http://www.omdbapi.com/?i=' + imdbId + '&apikey=e92b384b')
+//    .then((response) => {
+//        console.log(response)
+//
+//    }).catch((err) => {
+//        console.log(err)
+//    });
+//}
+
+function saveImdbID(element){
+    var imdbID = element.children[0].children[1].children[1].innerHTML;
+    sessionStorage.setItem('imdbID', imdbID);
 }
