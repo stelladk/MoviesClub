@@ -130,8 +130,10 @@ function saveBookmark(email, imdbID){
 //	var bookmark = {
 //	    bookmarkId : {email : email, imdb_id : imdbID}
 //	};
+    var account = {};
+    account["email"] = email;
     var bookmarkId = {};
-    bookmarkId["email"] = email;
+    bookmarkId["account"] = account;
     bookmarkId["imdb_id"] = imdbID;
 
     var bookmark = {};

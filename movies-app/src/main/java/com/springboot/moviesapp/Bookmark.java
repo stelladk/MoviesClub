@@ -26,9 +26,9 @@ public class Bookmark {
 		this.bookmarkId = bookmarkId;
 	}
 	
-	@MapsId("email")
-	@OneToOne()
-	@JoinColumn(name = "email", referencedColumnName = "email")
-	private Account account;
+//	@MapsId("email")
+//	@OneToOne()
+//	@JoinColumn(name = "email", referencedColumnName = "email")
+//	private Account account;
 	
 }

@@ -20,7 +20,7 @@ public class BookmarkService {
 		List<Bookmark> bookmarks =  rep.findAll();
 		List<Bookmark> selectedBookmarks = new ArrayList<Bookmark>();
 		for (Bookmark b: bookmarks ) {
-			if (b.getBookmarkId().getEmail().equals(email)) {
+			if (b.getBookmarkId().getAccount().getEmail().equals(email)) {
 				selectedBookmarks.add(b);
 			}
 		}

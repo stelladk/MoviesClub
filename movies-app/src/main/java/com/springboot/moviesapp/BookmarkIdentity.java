@@ -2,28 +2,30 @@ package com.springboot.moviesapp;
 
 import java.io.Serializable;
 
-import javax.persistence.Embeddable;
+import javax.persistence.*;
 
 import org.springframework.lang.NonNull;
 
 @Embeddable
 public class BookmarkIdentity implements Serializable{
-	@NonNull
-	private String email;
+	@MapsId("email")
+	@OneToOne()
+	@JoinColumn(name = "email", referencedColumnName = "email")
+	private Account account;
 	@NonNull
 	private String imdb_id;
 	public BookmarkIdentity() {
 		
 	}
-	public BookmarkIdentity(String email, String imdb_id) {
-		this.email = email;
+	public BookmarkIdentity(Account account, String imdb_id) {
+		this.account = account;
 		this.imdb_id = imdb_id;
 	}
-	public String getEmail() {
-		return email;
+	public Account getAccount() {
+		return account;
 	}
-	public void setEmail(String email) {
-		this.email = email;
+	public void setAccount(Account account) {
+		this.account = account;
 	}
 	public String getImdb_id() {
 		return imdb_id;
@@ -37,10 +39,12 @@ public class BookmarkIdentity implements Serializable{
 		if (o==null || getClass() != o.getClass())return false;
 		
 		BookmarkIdentity that = (BookmarkIdentity) o;
-		if (!email.equals(that.email)) {
+		if (!account.getEmail().equals(that.account.getEmail())) {
 			return false;
 		}
 		return imdb_id.equals(that.imdb_id);
 	}
+
+
 	
 }

@@ -52,7 +52,7 @@ public class ResponseController {
 		}
 		System.out.println(bookmark);
 		System.out.println(bookmark.getBookmarkId());
-		System.out.println(bookmark.getBookmarkId().getEmail());
+		System.out.println(bookmark.getBookmarkId().getAccount().getEmail());
 		System.out.println(bookmark.getBookmarkId().getImdb_id());
 		bookmarkService.save(bookmark);
 		result.setMessage("success");
