@@ -42,8 +42,7 @@ public class MoviesController {
 		accountService.save(account);
 		return "redirect:/";
 	}
-	
-	
+
 //	@GetMapping("/")
 //	public ModelAndView home() {
 //		ModelAndView model =  new ModelAndView();

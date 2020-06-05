@@ -87,9 +87,7 @@ function login() {
 			alert("errorz");
 		}
 	});
-	
-	
-    
+
 }
 
 
@@ -104,21 +102,103 @@ function bookm(element) {
         alert("Please connect to your account to save this movie.");
     } else {
 
+        var preview = element.parentElement.parentElement;
+        var opacity = preview.children[0].children[0].children[1];
+        var imdbID = opacity.children[1].innerHTML;
+        console.log(imdbID);
+
+        var email = sessionStorage.getItem("email");
+        console.log(email);
+
         if (element.children[0].className == "fa fa-bookmark-o") {
-            element.children[0].className = "fa fa-bookmark";
+            var success = saveBookmark(email, imdbID);
+            if(success) element.children[0].className = "fa fa-bookmark"; //save
         } else {
-            element.children[0].className = "fa fa-bookmark-o";
-            f = 0;
+            var success = deleteBookmark(email, imdbID);
+            if(success) element.children[0].className = "fa fa-bookmark-o"; //delete
+//            f = 0;
         }
 
-        var preview = element.parentElement.parentElement;
-        console.log(preview);
-        var opacity = preview.children[0].children[0].children[1];
-        console.log(opacity);
-        var imdbId = opacity.children[1].innerHTML;
-        console.log(imdbId);
-//        getMovieById(imdbId);
     }
+}
+
+function saveBookmark(email, imdbID){
+//    var bookmark ={}
+//    bookmark["bookmarkId"]["email"] = email;
+//    bookmark["bookmarkId"]["imdb_id"] = imdbID;
+
+//	var bookmark = {
+//	    bookmarkId : {email : email, imdb_id : imdbID}
+//	};
+    var bookmarkId = {};
+    bookmarkId["email"] = email;
+    bookmarkId["imdb_id"] = imdbID;
+
+    var bookmark = {};
+    bookmark["bookmarkId"] = bookmarkId;
+
+	console.log(bookmark);
+	alert("bookmark");
+
+	$.ajax({
+		url: '/saveb',
+		type: 'POST',
+		contentType: "application/json",
+		data: JSON.stringify(bookmark),
+		dataType: 'json',
+		cache: false,
+		timeout: 600000,
+        success: function(data) {
+			var json = JSON.stringify(data, null, 4);
+			console.log(data);
+			var msg = data["message"];
+			if(msg=="success"){
+				alert("success");
+				return true;
+			}else{
+				alert("System fail!");
+			}
+        },
+		error: function(e){
+			console.log(e);
+			alert("errorz");
+		}
+	});
+	return false;
+}
+
+function deleteBookmark(email, imdbID){
+    var bookmark ={}
+    bookmark["bookmarkId"]["email"] = email;
+    bookmark["bookmarkId"]["imdb_id"] = imdbID;
+	console.log(bookmark);
+	alert("bookmark");
+
+	$.ajax({
+		url: '/deleteb',
+		type: 'POST',
+		contentType: "application/json",
+		data: JSON.stringify(account),
+		dataType: 'json',
+		cache: false,
+		timeout: 600000,
+        success: function(data) {
+			var json = JSON.stringify(data, null, 4);
+			console.log(data);
+			var msg = data["message"];
+			if(msg=="success"){
+				alert("success");
+                return true;
+			}else{
+				alert("System fail!");
+			}
+        },
+		error: function(e){
+			console.log(e);
+			alert("errorz");
+		}
+	});
+	return false;
 }
 
 function log_in_out(f) {

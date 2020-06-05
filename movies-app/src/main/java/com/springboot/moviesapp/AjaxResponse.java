@@ -1,8 +1,11 @@
 package com.springboot.moviesapp;
 
+import java.util.List;
+
 public class AjaxResponse {
 	String message;
 	Account account;
+	List<Bookmark> bookmarks;
 	public String getMessage() {
 		return message;
 	}
@@ -14,5 +17,13 @@ public class AjaxResponse {
 	}
 	public void setAccount(Account account) {
 		this.account = account;
+	}
+
+	public List<Bookmark> getBookmarks() {
+		return bookmarks;
+	}
+
+	public void setBookmarks(List<Bookmark> bookmarks) {
+		this.bookmarks = bookmarks;
 	}
 }
