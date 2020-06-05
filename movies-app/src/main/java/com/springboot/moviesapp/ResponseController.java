@@ -94,4 +94,21 @@ public class ResponseController {
 		}
 		return ResponseEntity.ok(result);
 	}
+
+	@PostMapping("/checkb")
+	@ResponseBody
+	public  ResponseEntity<?> checkb(@RequestBody Bookmark bookmark, Errors errors){
+		AjaxResponse result = new AjaxResponse();
+		if (errors.hasErrors()) {
+			result.setMessage(errors.getAllErrors().stream().map(x->x.getDefaultMessage()).collect(Collectors.joining(",")));
+			return ResponseEntity.badRequest().body(result);
+		}
+		boolean exists = bookmarkService.check(bookmark.getBookmarkId());
+		if(exists){
+			result.setMessage("true");
+		}else{
+			result.setMessage("false");
+		}
+		return ResponseEntity.ok(result);
+	}
 }

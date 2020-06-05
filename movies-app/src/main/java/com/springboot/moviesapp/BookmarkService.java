@@ -20,8 +20,6 @@ public class BookmarkService {
 		List<Bookmark> bookmarks =  rep.findAll();
 		List<Bookmark> selectedBookmarks = new ArrayList<Bookmark>();
 		for (Bookmark b: bookmarks ) {
-			System.out.println(b.getBookmarkId().getAccount().getEmail());
-			System.out.println(email);
 			if (b.getBookmarkId().getAccount().getEmail().equals(email)) {
 				selectedBookmarks.add(b);
 			}
@@ -39,5 +37,15 @@ public class BookmarkService {
 	
 	public void remove(BookmarkIdentity bookmarkId) {
 		rep.deleteById(bookmarkId);
+	}
+
+	public boolean check(BookmarkIdentity bookmarkId){
+		List<Bookmark> bookmarks = selectByEmail(bookmarkId.getAccount().getEmail());
+		for(Bookmark b: bookmarks){
+			if(b.getBookmarkId().getImdb_id().equals(bookmarkId.getImdb_id())){
+				return true;
+			}
+		}
+		return false;
 	}
 }

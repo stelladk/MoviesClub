@@ -1,3 +1,4 @@
+var bookmarks;
 checkConn();
 var g = sessionStorage.getItem('word');
 if (g != null) {
@@ -61,7 +62,6 @@ function login() {
 	account["email"]=$("#email_form1").val();
 	account["password"]=$("#password_form1").val();
 	console.log(account)
-	alert("account");
 	$.ajax({
 		url: '/login',
 		type: 'POST',
@@ -76,7 +76,6 @@ function login() {
 			var msg = data["message"];
 			if(msg=="success"){
 				sessionStorage.setItem('email', data["account"]["email"]);
-				alert("success");
 				log_in_out(true);
 			}else{
 				alert("Wrong Data, try again!");
@@ -84,7 +83,6 @@ function login() {
         },
 		error: function(e){
 			console.log(e);
-			alert("errorz");
 		}
 	});
 
@@ -147,7 +145,6 @@ function saveBookmark(email, imdbID){
     bookmark["bookmarkId"] = bookmarkId;
 
 	console.log(bookmark);
-	alert("bookmark");
 
 	$.ajax({
 		url: '/saveb',
@@ -163,7 +160,6 @@ function saveBookmark(email, imdbID){
 			console.log(data);
 			var msg = data["message"];
 			if(msg=="success"){
-				alert("success");
 				success = true;
 			}else{
 				alert("System fail!");
@@ -171,7 +167,6 @@ function saveBookmark(email, imdbID){
         },
 		error: function(e){
 			console.log(e);
-			alert("errorz");
 		}
 	});
 	return success;
@@ -190,7 +185,6 @@ function deleteBookmark(email, imdbID){
     bookmark["bookmarkId"] = bookmarkId;
 
 	console.log(bookmark);
-	alert("bookmark");
 
 	$.ajax({
 		url: '/deleteb',
@@ -206,7 +200,6 @@ function deleteBookmark(email, imdbID){
 			console.log(data);
 			var msg = data["message"];
 			if(msg=="success"){
-				alert("success");
                 success = true;
 			}else{
 				alert("System fail!");
@@ -214,7 +207,6 @@ function deleteBookmark(email, imdbID){
         },
 		error: function(e){
 			console.log(e);
-			alert("errorz");
 		}
 	});
 	return success;
@@ -237,6 +229,7 @@ function checkConn() {
         document.getElementById("login_btn").style.display = "none";
         document.getElementById("bookm_btn").style.display = "list-item";
         document.getElementById("profile_btn").style.display = "list-item";
+        getBookmarks();
     } else {
         document.getElementById("signup_btn").style.display = "list-item";
         document.getElementById("login_btn").style.display = "list-item";
@@ -246,6 +239,12 @@ function checkConn() {
 }
 
 function getMovies(text) {
+    var icon;
+    var hover;
+    empty_icon = "fa fa-bookmark-o";
+    full_icon = "fa fa-bookmark";
+    let connected = sessionStorage.getItem("connected");
+
     axios.get('http://www.omdbapi.com/?s=' + text + '&apikey=e92b384b')
         .then((response) => {
             console.log(response);
@@ -275,6 +274,16 @@ function getMovies(text) {
                 if (poster == "N/A") {
                     poster = "film-reel.png";
                 }
+                if(connected == "false"){
+                    icon = empty_icon;
+                }else{
+                    var email = sessionStorage.getItem("email");
+                    if(checkBookmark(email, movie.imdbID)){
+                        icon = full_icon;
+                    }else{
+                        icon = empty_icon;
+                    }
+                }
                 output += `
                 <div class="movie-preview">
                     <div class="poster" onclick="saveImdbID(this)">
@@ -289,8 +298,8 @@ function getMovies(text) {
                         </a>
                     </div>
                         <div class="overlay-down">
-                            <button onclick="bookm(this)" type="button" class="btnbkmrk" title="Αγορά">
-                                <i class="fa fa-bookmark-o"></i>
+                            <button onclick="bookm(this)" type="button" class="btnbkmrk" title="Save it!">
+                                <i class="${icon}"></i>
                             </button>
                         </div>
                 </div>
@@ -318,4 +327,71 @@ function getMovies(text) {
 function saveImdbID(element){
     var imdbID = element.children[0].children[1].children[1].innerHTML;
     sessionStorage.setItem('imdbID', imdbID);
+}
+
+function getBookmarks(){
+	var email = sessionStorage.getItem('email');
+	console.log(email);
+	$.ajax({
+		url: '/bookmarks',
+		type: 'POST',
+		contentType: "application/json",
+		data: email,
+		dataType: 'json',
+		async: false,
+		cache: false,
+		timeout: 600000,
+        success: function(data) {
+			var json = JSON.stringify(data, null, 4);
+			console.log(data);
+			var msg = data["message"];
+			console.log(msg);
+			if(msg=="success"){
+                bookmarks = data["bookmarks"];
+			}else{
+				alert("System fail!");
+			}
+        },
+		error: function(e){
+			console.log(e);
+		}
+	});
+}
+
+function checkBookmark(email, imdbID){
+    var exists = false;
+
+    var account = {};
+    account["email"] = email;
+
+    var bookmarkId = {};
+    bookmarkId["account"] = account;
+    bookmarkId["imdb_id"] = imdbID;
+
+    var bookmark = {};
+    bookmark["bookmarkId"] = bookmarkId;
+
+    $.ajax({
+        url: '/checkb',
+        type: 'POST',
+        contentType: "application/json",
+        data: JSON.stringify(bookmark),
+        dataType: 'json',
+        async: false,
+        cache: false,
+        timeout: 600000,
+        success: function(data) {
+            var json = JSON.stringify(data, null, 4);
+            console.log(data);
+            var msg = data["message"];
+            console.log(msg);
+            if(msg=="true"){
+                exists = true;
+            }
+        },
+        error: function(e){
+            console.log(e);
+        }
+    });
+    return exists;
 }
