@@ -6,6 +6,14 @@ if (g != null) {
     getMovies(g);
 }
 
+function priv(){
+	alert("We won't try to steal your data.");
+}
+
+function sorry(){
+	alert("Page Under Construction");
+}
+
 function show_signup() {
 
     document.getElementById("box").style.display = "block";
@@ -18,11 +26,12 @@ function show_login() {
     document.getElementById("window_form1").style.display = "block";
 }
 
-
-document.getElementById("cancel").onclick = function() { close() };
-document.getElementById("box").onclick = function() { close() };
-document.getElementById("cancel1").onclick = function() { close() };
-document.getElementById("box1").onclick = function() { close() };
+if(window.location.href != "http://localhost:8181/bookmarks"){
+	document.getElementById("cancel").onclick = function() { close() };
+	document.getElementById("box").onclick = function() { close() };
+	document.getElementById("cancel1").onclick = function() { close() };
+	document.getElementById("box1").onclick = function() { close() };
+}
 
 function close() {
     document.getElementById("box").style.display = "none";
@@ -46,7 +55,7 @@ function signout(value) {
     var r = confirm("Would you like to sign out?")
     if (r == true) {
         log_in_out(false);
-        window.location.href = "index.html";
+        window.location.href = "/";
     }
 }
 
@@ -76,6 +85,7 @@ function login() {
 			var msg = data["message"];
 			if(msg=="success"){
 				sessionStorage.setItem('email', data["account"]["email"]);
+				alert("ok");
 				log_in_out(true);
 			}else{
 				alert("Wrong Data, try again!");
@@ -111,12 +121,19 @@ function bookm(element) {
         if (element.children[0].className == "fa fa-bookmark-o") {
             var success = saveBookmark(email, imdbID);
             console.log(success);
-            if(success) element.children[0].className = "fa fa-bookmark"; //save
+            if(success){
+				element.children[0].className = "fa fa-bookmark"; //save
+				document.getElementById("btnbkmrk").title = "Unsave it";
+			}
         } else {
             var success = deleteBookmark(email, imdbID);
-            if(success) element.children[0].className = "fa fa-bookmark-o"; //delete
+            if(success){ 
+				element.children[0].className = "fa fa-bookmark-o"; //delete
+				if(document.getElementById("btnbkmrk")!=null){
+					document.getElementById("btnbkmrk").title = "Save it";
+				}
+			}
 			if(window.location.href == "http://localhost:8181/bookmarks"){
-				console.log("im in");
 				window.location.reload();
 			}
         }
@@ -185,7 +202,6 @@ function deleteBookmark(email, imdbID){
     bookmark["bookmarkId"] = bookmarkId;
 
 	console.log(bookmark);
-	alert("bookmark");
 
 	$.ajax({
 		url: '/deleteb',
@@ -201,7 +217,6 @@ function deleteBookmark(email, imdbID){
 			console.log(data);
 			var msg = data["message"];
 			if(msg=="success"){
-				alert("success");
                 success = true;
 			}else{
 				alert("System fail!");
@@ -209,7 +224,6 @@ function deleteBookmark(email, imdbID){
         },
 		error: function(e){
 			console.log(e);
-			alert("errorz");
 		}
 	});
 	return success;
@@ -224,6 +238,7 @@ function log_in_out(f) {
 function checkConn() {
     var connected = sessionStorage.getItem('connected');
     if (connected == null) {
+		alert("null");
         sessionStorage.setItem('connected', false);
         connected = false;
     }
@@ -243,6 +258,7 @@ function checkConn() {
 
 function getMovies(text) {
     var icon;
+    var hover = "Save it!";
     empty_icon = "fa fa-bookmark-o";
     full_icon = "fa fa-bookmark";
     let connected = sessionStorage.getItem("connected");
@@ -282,8 +298,10 @@ function getMovies(text) {
                     var email = sessionStorage.getItem("email");
                     if(checkBookmark(email, movie.imdbID)){
                         icon = full_icon;
+						hover = "Unsave it!";
                     }else{
                         icon = empty_icon;
+						hover = "Save it!"
                     }
                 }
                 output += `
@@ -300,7 +318,7 @@ function getMovies(text) {
                         </a>
                     </div>
                         <div class="overlay-down">
-                            <button onclick="bookm(this)" type="button" class="btnbkmrk" title="Αγορά">
+                            <button onclick="bookm(this)" type="button" class="btnbkmrk" id="btnbkmrk" title="${hover}">
                                 <i class="${icon}"></i>
                             </button>
                         </div>
@@ -349,7 +367,6 @@ function getBookmarks(){
 			var msg = data["message"];
 			console.log(msg);
 			if(msg=="success"){
-				alert("success");
                 bookmarks = data["bookmarks"];
 			}else{
 				alert("System fail!");
@@ -357,7 +374,6 @@ function getBookmarks(){
         },
 		error: function(e){
 			console.log(e);
-			alert("errorz");
 		}
 	});
 }

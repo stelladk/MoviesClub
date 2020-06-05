@@ -264,7 +264,6 @@ body::-webkit-scrollbar {
     grid-area: 'rand';
     background-color: darkgrey;
     width: 100%;
-    /* padding-left: 10px; */
 }
 
 .rand h3 {
@@ -273,7 +272,7 @@ body::-webkit-scrollbar {
 }
 
 .rand ol {
-    padding-left: 25px;
+    padding-left: 30px;
 }
 
 .rand ol li {
@@ -355,7 +354,8 @@ footer .row a:any-link {
 }
 
 footer .row a:hover {
-    color: indigo;
+    color: white;
+    text-decoration: underline;
 }
 
 

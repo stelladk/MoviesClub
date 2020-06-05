@@ -18,7 +18,6 @@ function getBookmarks(){
 			var msg = data["message"];
 			console.log(msg);
 			if(msg=="success"){
-				alert("success");
                 var bookmarks = data["bookmarks"];
 				let output='';
 				$.each(bookmarks, (index, bookmark) => {
@@ -47,7 +46,7 @@ function getBookmarks(){
 			                        </a>
 			                    </div>
 		                        <div class="overlay-down">
-		                            <button onclick="bookm(this)" type="button" class="btnbkmrk" title="Bookmark">
+		                            <button onclick="bookm(this)" type="button" class="btnbkmrk" title="Unsave it!">
 		                                <i class="fa fa-bookmark"></i>
 		                            </button>
 		                        </div>
@@ -68,7 +67,7 @@ function getBookmarks(){
         },
 		error: function(e){
 			console.log(e);
-			alert("errorz");
+			alert("You have no Bookmarks yet!");
 		}
 	});
 }

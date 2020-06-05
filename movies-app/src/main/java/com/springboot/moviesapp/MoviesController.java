@@ -1,14 +1,11 @@
 package com.springboot.moviesapp;
 
-import javax.servlet.http.HttpServletRequest;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
 
 @Controller
 public class MoviesController {
@@ -40,7 +37,7 @@ public class MoviesController {
 	@PostMapping(value = "/signup")
 	public String signup(@ModelAttribute("account") Account account) {
 		accountService.save(account);
-		return "redirect:/";
+		return "redirect:#";
 	}
 
 //	@GetMapping("/")

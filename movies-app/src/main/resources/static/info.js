@@ -19,6 +19,7 @@ function getMovieById(imdbId){
         document.getElementById("poster").src = img;
         document.getElementById("title").innerHTML = movie.Title;
         document.getElementById("year").innerHTML = movie.Year;
+		document.getElementById("rated").innerHTML = movie.Rated;
         document.getElementById("released").innerHTML = movie.Released;
         document.getElementById("runtime").innerHTML = movie.Runtime;
         document.getElementById("genre").innerHTML = movie.Genre;
