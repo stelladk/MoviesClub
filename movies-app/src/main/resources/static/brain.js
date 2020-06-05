@@ -112,6 +112,7 @@ function bookm(element) {
 
         if (element.children[0].className == "fa fa-bookmark-o") {
             var success = saveBookmark(email, imdbID);
+            console.log(success);
             if(success) element.children[0].className = "fa fa-bookmark"; //save
         } else {
             var success = deleteBookmark(email, imdbID);
@@ -130,6 +131,9 @@ function saveBookmark(email, imdbID){
 //	var bookmark = {
 //	    bookmarkId : {email : email, imdb_id : imdbID}
 //	};
+
+    var success = false;
+
     var account = {};
     account["email"] = email;
     var bookmarkId = {};
@@ -148,6 +152,7 @@ function saveBookmark(email, imdbID){
 		contentType: "application/json",
 		data: JSON.stringify(bookmark),
 		dataType: 'json',
+		async: false,
 		cache: false,
 		timeout: 600000,
         success: function(data) {
@@ -156,7 +161,7 @@ function saveBookmark(email, imdbID){
 			var msg = data["message"];
 			if(msg=="success"){
 				alert("success");
-				return true;
+				success = true;
 			}else{
 				alert("System fail!");
 			}
@@ -166,13 +171,21 @@ function saveBookmark(email, imdbID){
 			alert("errorz");
 		}
 	});
-	return false;
+	return success;
 }
 
 function deleteBookmark(email, imdbID){
-    var bookmark ={}
-    bookmark["bookmarkId"]["email"] = email;
-    bookmark["bookmarkId"]["imdb_id"] = imdbID;
+    var success = false;
+
+    var account = {};
+    account["email"] = email;
+    var bookmarkId = {};
+    bookmarkId["account"] = account;
+    bookmarkId["imdb_id"] = imdbID;
+
+    var bookmark = {};
+    bookmark["bookmarkId"] = bookmarkId;
+
 	console.log(bookmark);
 	alert("bookmark");
 
@@ -182,6 +195,7 @@ function deleteBookmark(email, imdbID){
 		contentType: "application/json",
 		data: JSON.stringify(account),
 		dataType: 'json',
+		async: false,
 		cache: false,
 		timeout: 600000,
         success: function(data) {
@@ -190,7 +204,7 @@ function deleteBookmark(email, imdbID){
 			var msg = data["message"];
 			if(msg=="success"){
 				alert("success");
-                return true;
+                success = true;
 			}else{
 				alert("System fail!");
 			}
@@ -200,7 +214,7 @@ function deleteBookmark(email, imdbID){
 			alert("errorz");
 		}
 	});
-	return false;
+	return success;
 }
 
 function log_in_out(f) {
