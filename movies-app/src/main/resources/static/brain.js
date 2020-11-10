@@ -262,7 +262,7 @@ function getMovies(text) {
     full_icon = "fa fa-bookmark";
     let connected = sessionStorage.getItem("connected");
 
-    axios.get('http://www.omdbapi.com/?s=' + text + '&apikey=e92b384b')
+    axios.get('http://www.omdbapi.com/?s=' + text + '&apikey=********')
         .then((response) => {
             console.log(response);
             let movies = response.data.Search;
@@ -332,16 +332,6 @@ function getMovies(text) {
         });
 }
 
-
-//function getMovieById(imdbId){
-//    axios.get('http://www.omdbapi.com/?i=' + imdbId + '&apikey=e92b384b')
-//    .then((response) => {
-//        console.log(response)
-//
-//    }).catch((err) => {
-//        console.log(err)
-//    });
-//}
 
 function saveImdbID(element){
     var imdbID = element.children[0].children[1].children[1].innerHTML;
